@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "hardhat test"
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.js",
+    "deploy:ropsten": "hardhat run scripts/deploy.js --network ropsten"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +19,7 @@
     "ethers": "^5.2.0",
     "hardhat": "^2.3.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "dotenv": "^10.0.0"
+  }
 }
