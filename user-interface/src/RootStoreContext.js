@@ -1,7 +1,9 @@
 import { createContext } from "react";
 import RootStore from "./state/RootStore";
+import Transport from "./state/Transport";
 
-const store = new RootStore();
+const transport = new Transport();
+const store = new RootStore(transport);
 window.store = store; // For debuggin'
 
 export const RootStoreContext = createContext();
