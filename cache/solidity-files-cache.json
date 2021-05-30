@@ -1,7 +1,7 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "C:\\Users\\kmcke\\source\\hardhat-tutorial\\blockchain\\contracts\\Token.sol": {
+    "C:\\Users\\kmcke\\source\\hardhat-tutorial\\contracts\\Token.sol": {
       "lastModificationDate": 1622313090850,
       "contentHash": "7884c1bd7c217c7eeee5c0abc2fde189",
       "sourceName": "contracts/Token.sol",
@@ -37,7 +37,7 @@
         "Token"
       ]
     },
-    "C:\\Users\\kmcke\\source\\hardhat-tutorial\\blockchain\\node_modules\\hardhat\\console.sol": {
+    "C:\\Users\\kmcke\\source\\hardhat-tutorial\\node_modules\\hardhat\\console.sol": {
       "lastModificationDate": 1622312020919,
       "contentHash": "cc4777addd464ea56fa35b1c45df0591",
       "sourceName": "hardhat/console.sol",
