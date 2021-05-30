@@ -1,12 +1,23 @@
 import React from "react";
 import withStore from "../withStore";
+import { Button } from "@material-ui/core";
+import styled from "styled-components";
+
+const Container = styled.div`
+  padding: 1em;
+  > * {
+    margin-bottom: 1em;
+  }
+`;
 
 const MobxSkeleton = ({ store }) => {
   return (
-    <div>
+    <Container>
       <div>Count: {store.count}</div>
-      <button onClick={() => store.tick()}>Tick</button>
-    </div>
+      <Button variant="contained" color="primary" onClick={() => store.tick()}>
+        Tick
+      </Button>
+    </Container>
   );
 };
 
