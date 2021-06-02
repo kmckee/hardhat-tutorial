@@ -1,11 +1,10 @@
 import WalletStore from "./WalletStore";
-import TransportMock from "./Transport.mock";
 
 // TODO: It warns about using the wrong network.
 // TODO: It subscribes to window.ethereum.on("accountsChanged", and updates.
 // TODO: It subscribes to window.ethereum.on("networkChanged", ( and updates.
 
-describe("WalletStore", () => {
+xdescribe("WalletStore", () => {
   let subject;
   let transport;
   beforeEach(() => {

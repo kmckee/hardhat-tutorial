@@ -1,17 +1,19 @@
 import { makeAutoObservable } from "mobx";
 import WalletStore from "./WalletStore";
+import TokenStore from "./TokenStore";
 
 class RootStore {
-  count = 1;
   walletStore = null;
-  transport = null;
-  constructor(transport) {
+  tokenStore = null;
+  constructor() {
     makeAutoObservable(this, { transport: false });
-    this.transport = transport;
-    this.walletStore = new WalletStore(transport);
+    this.walletStore = new WalletStore();
+    this.tokenStore = new TokenStore(this.walletStore);
+    this.connect(); // This is temporary, user should initiate.
   }
-  tick() {
-    this.count += 1;
+  async connect() {
+    await this.walletStore.connect();
+    await this.tokenStore.connect();
   }
 }
 
