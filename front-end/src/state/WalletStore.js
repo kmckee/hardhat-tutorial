@@ -21,6 +21,9 @@ class WalletStore {
     this.address = null;
     this.provider = null;
   }
+  get isConnected() {
+    return this.address !== null;
+  }
 }
 // TODO ?
 // State:

@@ -1,6 +1,11 @@
 import WelcomeSection from "./WelcomeSection";
+import NotConnected from "./NotConnected";
+import withStore from "../withStore";
 
-function App() {
+function App({ store }) {
+  if (store.wallet.isConnected === false) {
+    return <NotConnected />;
+  }
   return (
     <div>
       <WelcomeSection />
@@ -8,4 +13,4 @@ function App() {
   );
 }
 
-export default App;
+export default withStore(App);
