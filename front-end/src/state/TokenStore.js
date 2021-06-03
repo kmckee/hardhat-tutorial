@@ -8,23 +8,23 @@ class TokenStore {
   name;
   symbol;
   token;
-  walletStore;
-  constructor(walletStore) {
+  wallet;
+  constructor(wallet) {
     makeAutoObservable(this);
-    this.walletStore = walletStore;
+    this.wallet = wallet;
   }
   async connect() {
     this.token = new ethers.Contract(
       contractAddress.Token,
       TokenArtifact.abi,
-      this.walletStore.provider
+      this.wallet.provider
     );
     await this.refresh();
   }
   async refresh() {
     this.name = await this.token.name();
     this.symbol = await this.token.symbol();
-    this.balance = await this.token.balanceOf(this.walletStore.address);
+    this.balance = await this.token.balanceOf(this.wallet.address);
   }
 }
 
